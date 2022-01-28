@@ -1,0 +1,29 @@
+CREATE TABLE fruits (
+	fruit_id INTEGER PRIMARY KEY,
+	fruit_name VARCHAR (255) NOT NULL,
+	basket_id INTEGER
+);
+
+CREATE TABLE baskets (
+	basket_id INTEGER PRIMARY KEY,
+	basket_name VARCHAR (255) NOT NULL
+);
+
+
+
+INSERT INTO baskets (basket_id, basket_name)
+VALUES
+	(1, 'A'),
+	(2, 'B'),
+	(3, 'C');
+
+INSERT INTO fruits (
+	fruit_id,
+	fruit_name,
+	basket_id
+)
+VALUES
+	(1, 'Apple', 1),
+	(2, 'Orange', 1),
+	(3, 'Banana', 2),
+	(4, 'Strawberry', NULL);
