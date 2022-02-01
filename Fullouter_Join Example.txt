@@ -1,0 +1,108 @@
+CREATE TABLE fruits (
+	fruit_id INTEGER PRIMARY KEY,
+	fruit_name VARCHAR (255) NOT NULL,
+	basket_id INTEGER
+);
+
+CREATE TABLE baskets (
+	basket_id INTEGER PRIMARY KEY,
+	basket_name VARCHAR (255) NOT NULL
+);
+
+
+INSERT INTO baskets (basket_id, basket_name)
+VALUES
+	(1, 'A');
+	
+INSERT INTO baskets (basket_id, basket_name)
+VALUES
+	(2, 'B');
+	
+	INSERT INTO baskets (basket_id, basket_name)
+VALUES
+	(3, 'C');	
+	
+	
+	
+	select * from baskets;
+	
+	INSERT INTO fruits (
+	fruit_id,
+	fruit_name,
+	basket_id
+)
+VALUES
+	(1, 'Apple', 1);
+	
+INSERT INTO fruits (
+	fruit_id,
+	fruit_name,
+	basket_id
+)
+VALUES
+	(2, 'Orange', 1);
+	
+
+	INSERT INTO fruits (
+	fruit_id,
+	fruit_name,
+	basket_id
+)
+VALUES (4, 'Strawberry', NULL);
+	
+	
+	INSERT INTO fruits (
+	fruit_id,
+	fruit_name,
+	basket_id
+)
+VALUES
+	(3, 'Banana', 2);
+	
+	
+select * from fruits ;	
+
+
+
+
+/****************************        Queries             ************************/
+
+
+
+
+
+
+SELECT
+	basket_name,
+	fruit_name
+FROM
+	fruits
+FULL OUTER JOIN baskets ON baskets.basket_id = fruits.basket_id;
+
+
+
+SELECT
+	basket_name,
+	fruit_name
+FROM
+	fruits
+FULL OUTER JOIN baskets ON baskets.basket_id = fruits.basket_id
+WHERE
+	fruit_name IS NULL;
+	
+	
+SELECT
+	basket_name,
+	fruit_name
+FROM
+	fruits
+FULL OUTER JOIN baskets ON baskets.basket_id = fruits.basket_id
+WHERE
+	basket_name IS NULL;	
+	
+	
+	
+	
+	
+	
+	
